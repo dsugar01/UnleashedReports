@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>{% block title %}Title Holder{% endblock %}</title>
+    {% block stylesheets %}
+      <link href="{{ asset('bundles/pinanobootstrap3/css/bootstrap.css') }}" rel="stylesheet" />
+      <link href="{{ asset('bundles/pinanobootstrap3/css/bootstrap-theme.css') }}" rel="stylesheet" />
+    {% endblock %}
+  </head>
+  <body>
+    <h1>{% block bodyTitle %}Title Holder{% endblock %}</h1>
+    <hr>
+    {{ form_start(form) }}
+       {{ form_row(form.reportType) }}
+       {{ form_row(form.dateRange) }}
+    {{ form_end(form) }}
+  </body>
+</html>

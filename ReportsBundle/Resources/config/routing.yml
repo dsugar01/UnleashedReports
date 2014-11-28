@@ -1,0 +1,3 @@
+unleashed_reports_homepage:
+    path:     /unleashedmain
+    defaults: { _controller: UnleashedReportsBundle:Default:index }

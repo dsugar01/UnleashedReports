@@ -1,0 +1,28 @@
+<?php
+
+namespace Unleashed\ReportsBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Unleashed\ReportsBundle\Entity\Report;
+use Symfony\Component\HttpFoundation\Request;
+
+class DefaultController extends Controller
+{
+    public function indexAction(Request $request)
+    {
+        $report = new Report();
+
+        $form = $this->createFormBuilder($report)
+          ->add('reportType', 'choice', array(
+            'choices' => array('reportOne' => 'Report One',
+                               'reportTwo' => 'Report Two',
+                               'reportThree' => 'Report Three'),
+            'required' => false))
+          ->add('dateRange', 'date')
+          ->add('save', 'submit');
+    
+        //$form->handleRequest($request);
+        return $this->render('UnleashedReportsBundle:Default:index.html.twig', array('form' => $form->createView()));
+    }
+}
+?>
