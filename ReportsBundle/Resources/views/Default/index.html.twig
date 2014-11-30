@@ -1,13 +1,17 @@
 <html>
   <head>
-    <title>{% block title %}Title Holder{% endblock %}</title>
+    <title>{% block title %}Unleashed Technlogies Report Generator{% endblock %}</title>
     {% block stylesheets %}
       <link href="{{ asset('bundles/pinanobootstrap3/css/bootstrap.css') }}" rel="stylesheet" />
       <link href="{{ asset('bundles/pinanobootstrap3/css/bootstrap-theme.css') }}" rel="stylesheet" />
+      <link href="{{ asset('bundles/daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" />
     {% endblock %}
+    <script type="text/javascript" src="bundles/daterangepicker/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bundles/daterangepicker/moment.js"></script>
+    <script type="text/javascript" src="bundles/daterangepicker/daterangepicker.js"></script>
   </head>
   <body>
-    <h1>{% block bodyTitle %}Title Holder{% endblock %}</h1>
+    <h1>{% block bodyTitle %}Unleashed Technologies Report Generator{% endblock %}</h1>
     <hr>
     {{ form_start(form) }}
        {{ form_row(form.reportType) }}
